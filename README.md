@@ -6,5 +6,5 @@ Simple functions to short url and store total views of that URL.
 - Copy __.env.example__ file to __.env__ and edit database credentials there
 - Run __composer install__
 - Run __php artisan key:generate__
-- Run __php artisan migrate
+- Run __php artisan migrate__
 - That's it: launch the main URL. 
