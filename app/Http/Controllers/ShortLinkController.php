@@ -41,10 +41,12 @@ class ShortLinkController extends Controller
             return ShortLink::where('code', $code)->first();
         });
 
-        $history = Cache::remember('code_history' . $code, 60, function () use ($link) {
+        return redirect()->away($link->link,301);
+
+        /*$history = Cache::remember('code_history' . $code, 60, function () use ($link) {
             return $link->history()->paginate();
         });
-        return view('shortlink.history', compact('history', 'code'));
+        return view('shortlink.history', compact('history', 'code'));*/
     }
 
     public function generateRandomCode()
